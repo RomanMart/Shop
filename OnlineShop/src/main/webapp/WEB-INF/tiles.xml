@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base" template="/view/tiles/layout.jsp">
+		<put-attribute name="head" value="/view/tiles/header.jsp" ></put-attribute>
+		<put-attribute name="body" value="/view/tiles/body.jsp" ></put-attribute>
+		<put-attribute name="footer" value="/view/tiles/footer.jsp"></put-attribute>
+		
+	</definition>
+	
+	<definition name="SignIn" extends="base">
+		<put-attribute name="body" value="/view/SignIn.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="AddPhone" extends="base">
+		<put-attribute name="body" value="/view/addPhone.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="CreatePhone" extends="base">
+		<put-attribute name="body" value="/view/createPhone.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="basket" extends="base">
+		<put-attribute name="body" value="/view/basket.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="createPhone" extends="base">
+		<put-attribute name="body" value="/view/createPhone.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="Phones" extends="base">
+		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="RemovePhone" extends="base">
+		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="filter" extends="base">
+		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="RemovePhoneById" extends="base">
+		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
+		
+	</definition>
+	
+	<!-- <definition name="vsiAvtori" extends="base">
+		<put-attribute name="body" value="/view/authors.jsp"></put-attribute>
+		
+	</definition>
+	
+	
+	
+	<definition name="author-*" extends="base">
+		<put-attribute name="body" value="/view/{1}.jsp"></put-attribute>
+		
+	</definition>
+	
+	<definition name="book-*" extends="base">
+		<put-attribute name="body" value="/view/{1}.jsp"></put-attribute>
+		
+	</definition>
+	
+	<definition name="connectAB" extends="base">
+		<put-attribute name="body" value="/view/connectAB.jsp"></put-attribute>
+		
+	</definition>
+	 -->
+	
+	
+
+	
+	
+</tiles-definitions>

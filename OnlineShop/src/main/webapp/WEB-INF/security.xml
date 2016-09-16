@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+                    http://www.springframework.org/schema/security 
+                    http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+	<http use-expressions="true">
+		<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/show*" access="isAuthenticated()" />
+		<intercept-url pattern="/create*" access="hasRole('ADMIN')" />
+	
+		<form-login 
+		login-page="/login2" 
+		login-processing-url="/aaa" 
+		 default-target-url="/" 
+		always-use-default-target="true"/>
+		
+		
+		
+		<logout logout-url="/logout" logout-success-url="/" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="a" password="a" authorities="ROLE_ADMIN" />
+				<user name="b" password="b" authorities="ROLE_USER" />
+			</user-service>
+
+		</authentication-provider>
+		<authentication-provider user-service-ref="uuu">
+			
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>
