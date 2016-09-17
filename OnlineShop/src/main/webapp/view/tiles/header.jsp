@@ -45,12 +45,13 @@
 							<a href="/addPhone">Додати телефон</a>
 							
 						</security:authorize></li>
-						<li><security:authorize access="hasRole('ADMIN')">
+						<li><security:authorize access="isAuthenticated()">
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
-							<a href="showAllPhones">Всі телефони</a>
+							<a href="showAllPhonesB">Всі телефони</a>
 							
 						</security:authorize></li>
+						
 
 				</ul>
 				<li><security:authorize access="isAnonymous()">

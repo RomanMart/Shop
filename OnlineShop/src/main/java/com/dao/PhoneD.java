@@ -13,8 +13,8 @@ public interface PhoneD extends JpaRepository<Phone, Integer> {
 	@Query("from Phone p where p.brand like :brand")
 	Phone findByUsername(@Param("brand") String brand);
 	
-	@Query("from Phone p where p.brand like :brand and p.type like :type")
-	Phone findByBrandAndType(@Param("brand") String brand, @Param("type") String type);
+	@Query("from Phone p where p.brand like :brand")
+	List<Phone> findByBrand(@Param("brand") String brand);
 	
 	@Query("from Phone p where p.id like :id")
 	Phone findById(@Param("id") Integer id);

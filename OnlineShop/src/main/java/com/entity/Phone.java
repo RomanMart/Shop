@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -20,11 +21,30 @@ public class Phone {
 	private String type;
 	private double price;
 	private boolean isAvailable = true;
-	@Override
-	public String toString() {
-		return "Phone [id=" + id + ", brand=" + brand + ", type=" + type
-				+ ", price=" + price + ", isAvailable=" + isAvailable + "]";
+	@Lob
+	private byte [] file;
+	
+
+	
+	public Phone(int id, String brand, String type, double price, boolean isAvailable, byte[] file) {
+		super();
+		this.id = id;
+		this.brand = brand;
+		this.type = type;
+		this.price = price;
+		this.isAvailable = isAvailable;
+		this.file = file;
 	}
+	
+
+	public byte[] getFile() {
+		return file;
+	}
+
+	public void setFile(byte[] file) {
+		this.file = file;
+	}
+
 
 	// private Image image;
 	@ManyToMany(fetch = FetchType.LAZY)
@@ -32,20 +52,6 @@ public class Phone {
 
 	public Phone() {
 	}
-	
-
-	
-
-
-	public Phone(int id, String brand, String type, double price, boolean isAvailable) {
-		super();
-		this.id = id;
-		this.brand = brand;
-		this.type = type;
-		this.price = price;
-		this.isAvailable = isAvailable;
-	}
-
 
 	public int getId() {
 		return id;

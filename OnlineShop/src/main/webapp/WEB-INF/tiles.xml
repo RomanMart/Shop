@@ -35,16 +35,32 @@
 		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
 		
 	</definition>
+	<definition name="PhoneBase" extends="base">
+		<put-attribute name="body" value="/view/PhoneBase.jsp"></put-attribute>
+		
+	</definition>
 	<definition name="RemovePhone" extends="base">
 		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
 		
 	</definition>
 	<definition name="filter" extends="base">
-		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
+		<put-attribute name="body" value="/view/Filter.jsp"></put-attribute>
 		
 	</definition>
 	<definition name="RemovePhoneById" extends="base">
 		<put-attribute name="body" value="/view/Phones.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="singlePhone" extends="base">
+		<put-attribute name="body" value="/view/singlePhone.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="Order" extends="base">
+		<put-attribute name="body" value="/view/basket.jsp"></put-attribute>
+		
+	</definition>
+	<definition name="Find" extends="base">
+		<put-attribute name="body" value="/view/Find.jsp"></put-attribute>
 		
 	</definition>
 	

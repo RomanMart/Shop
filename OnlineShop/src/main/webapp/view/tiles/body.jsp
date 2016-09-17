@@ -15,121 +15,103 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href='<c:url value="/res/css/bootstrap.css"></c:url>'>
-	<link rel="stylesheet"
-	href='<c:url value="/res/css/style.css"></c:url>'>
+<link rel="stylesheet" href='<c:url value="/res/css/style.css"></c:url>'>
 </head>
 <body>
-	      
-      <div class="container">
-          <div class="row">
-              <div class="container">
-                  <ol class="breadcrumb">
-                      <li>
-                          <a href="#">
-                              <i class="fa fa-home">Головна</i>
-                          </a>
-                      </li>
-                      <li><a href="#">Блог</a></li>
-                      <li><a href="#">Категорія</a></li>
-                      <li class="active">Назва</li>
-                  </ol>
+
+	
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="#"> <i class="fa fa-home">Головна</i>
+			</a></li>
+			<li><security:authorize access="isAuthenticated()">
+					<a href="showAllPhones">Телефони</a>
+				</security:authorize></li>
+			<li><a href="#">Категорія</a></li>
+			<li class="active">Назва</li>
+		</ol>
+	</div>
+
+<div id="thumbnail-preview-indicators" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#thumbnail-preview-indicators" data-slide-to="0" class="active">
+              <div class="thumbnail">
+                <img class="img-responsive" src="https://cnet4.cbsistatic.com/hub/i/r/2014/08/08/909dd61f-d57f-4566-aff7-f3f271735380/thumbnail/770x433/96951be4443e0d4d0271703be5a863bd/kyocera-brigadier-1144-004.jpg.jpg">
               </div>
+            </li>
+            <li data-target="#thumbnail-preview-indicators" data-slide-to="1">
+            <div class="thumbnail">
+                <img class="img-responsive" src="http://s.appleinsider.ru/2016/02/iphone-6c_iphones_silver.jpg">
+              </div>
+            </li>
+            <li data-target="#thumbnail-preview-indicators" data-slide-to="2">
+            <div class="thumbnail">
+                <img class="img-responsive" src="http://cdn.mos.techradar.com/art/mobile_phones/iPhone/iPhone%207/iPhone-7-concept-970-80.jpg">
+              </div>
+            </li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item slides active">
+              <div class="slide-1"></div>
               <div class="container">
-              <ul class="nav nav-tabs">
-                  <li class="active"><a href="#">елемент 1<span class="badge">14</span></a></li>
+                <div class="carousel-caption">
+                  <h1></h1>
+                  <p></p>
                   
-              </ul> 
+                  <p><security:authorize access="isAnonymous()"><a class="btn btn-lg btn-primary" href="/sign" role="button">Зареєструватись</a></security:authorize></p>
+                </div>
               </div>
-              <br>
-	
-	<br>
+            </div>
+            <div class="item slides">
+              <div class="slide-2"></div>
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Another example headline.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="item slides">
+              <div class="slide-3"></div>
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>One more for good measure.</h1>
+                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row">
-              <div class="col-xs-6 col-sm-4 ">
-                  <div class="thumbnail">
-                        <img src="http://placehold.it/400x240" alt="">
-                        <div class="caption"><h3><a href="#">Заголовок</a></h3>
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
-                            <a href="#" class="btn btn-success">Детальніше</a>
-                      </div>
-                  </div>
-              </div>
-               <div class="col-xs-6 col-sm-4 ">
-                  <div class="thumbnail">
-                        <img src="http://placehold.it/400x240" alt="">
-                        <div class="caption"><h3><a href="#">Заголовок</a></h3>
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
-                            <a href="#" class="btn btn-success">Детальніше</a>
-                      </div>
-                  </div>
-              </div>
-               <div class="col-xs-6 col-sm-4 ">
-                  <div class="thumbnail">
-                        <img src="http://placehold.it/400x240" alt="">
-                        <div class="caption"><h3><a href="#">Заголовок</a></h3>
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
-                            <a href="#" class="btn btn-success">Детальніше</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 ">
-                  <div class="thumbnail">
-                        <img src="http://placehold.it/400x240" alt="">
-                        <div class="caption"><h3><a href="#">Заголовок</a></h3>
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
-                            <a href="#" class="btn btn-success">Детальніше</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 ">
-                  <div class="thumbnail">
-                        <img src="http://placehold.it/400x240" alt="">
-                        <div class="caption"><h3><a href="#">Заголовок</a></h3>
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
-                            <a href="#" class="btn btn-success">Детальніше</a>
-                      </div>
-                  </div>
-              </div>
-               <div class="col-xs-6 col-sm-4 ">
-                  <div class="thumbnail">
-                        <img src="http://placehold.it/400x240" alt="">
-                        <div class="caption"><h3><a href="#">Заголовок</a></h3>
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
-                            <a href="#" class="btn btn-success">Детальніше</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      
-      </div>
-	
+          <a class="left carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="right carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div> 
+<div class="container">
+		<div class="col-md-5 pull-right">
+			<div class="form-area">
+				<form action="findByBrand">
+					<input type="hidden" name="${_csrf.parameterName}"
+						value="${_csrf.token}" /> <br style="clear: both"> <input
+						type="text" class="form-control" name="brand" placeholder="Пошук за моделлю"
+						required> <input type="submit" value="Шукати" id="submit"
+						name="submit" class="btn btn-primary pull-right">
+				</form>
+			</div>
+		</div>
+		<div class="col-md-5 pull-right">
+			<div class="form-area">
+				<form action="filter">
+					<input type="hidden" name="${_csrf.parameterName}"
+						value="${_csrf.token}" /> <br style="clear: both"> <input
+						type="text" class="form-control" name="price"
+						placeholder="Пошук за ціною" required> <input type="submit"
+						value="Шукати" id="submit" name="submit"
+						class="btn btn-primary pull-right">
+				</form>
+			</div>
+		</div>
+	</div>
 
-
-
-	<!-- <br>
-	<a href="saa">show all authors</a>
-	<br>
-	<a href = "addAuthor">add author</a>
-	<br>
-	<a href="createBook">create Book</a>
-	<br>
-	<a href="toConnect"> toConnect </a>
-	<br> -->
-
-	<!-- <a href="/login">login</a> 
-	<a href="/login2">login2</a>-->
-
-	<br>
-
-	<!--
-	<form action="addUser" method="post">
-		<input type="hidden"
-				name="${_csrf.parameterName}"
-				value="${_csrf.token}"/> 
-			<input name="username">
-			<input type="password" name="password">
-			<input type="submit">	
-	</form>
- -->
 </body>
 </html>

@@ -12,6 +12,8 @@ public interface PhoneSRV {
 	void remove(Phone phone);
 	List<Phone> findByPrice(Double price); 
 	void remove(Integer id);
+	List<Phone> findByBrand(String brand);
+	
 	
 	
 }

@@ -41,11 +41,11 @@ public class PhoneSRVImpl implements PhoneSRV {
 		phoneD.save(phone);
 	}
 
-	@Transactional
-	public void remove(String brand, String type) {
-		Phone phone = phoneD.findByBrandAndType(brand, type);
-		phoneD.delete(phone.getId());
-	}
+//	@Transactional
+//	public void remove(String brand, String type) {
+//		Phone phone = phoneD.findByBrand(brand);
+//		phoneD.delete(phone.getId());
+//	}
 
 	public List<Phone> findByPrice(Double price) {
 
@@ -60,5 +60,11 @@ public class PhoneSRVImpl implements PhoneSRV {
 	public void remove(Phone phone) {
 		phoneD.delete(phone);
 	}
+
+	public List<Phone> findByBrand(String brand) {
+		return phoneD.findByBrand(brand);
+	}
+	
+
 
 }
