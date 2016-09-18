@@ -66,18 +66,12 @@ public class MainController {
 	}
 
 	@RequestMapping(value = "createPhone", method = RequestMethod.POST)
-	public String createPhone(@RequestParam String brand, String type, double price, @RequestParam MultipartFile file,
-			Model model) {
+	public String createPhone(@RequestParam String brand,
+			 String type,  double price, Model model) {
 		Phone phone = new Phone();
 		phone.setBrand(brand);
 		phone.setType(type);
 		phone.setPrice(price);
-		try {
-			phone.setFile(file.getBytes());
-		} catch (IOException e) {
-
-			phone.setFile(new byte[1]);
-		}
 		phoneService.save(phone);
 		model.addAttribute("showAllPhones", phoneService.findAll());
 		return "Phones";

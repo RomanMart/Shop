@@ -18,39 +18,30 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
 	<div class="container">
-		<div class="col-md-5">
-			<div class="form-area">
-				<form action="/createPhone?${_csrf.parameterName}=${_csrf.token}"
-					method="post" enctype="multipart/form-data">
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}" /> <br style="clear: both">
-					<h3 style="margin-bottom: 25px; text-align: center;">Додати
-						телефон</h3>
-					<div class="form-group">
-						<input type="text" class="form-control" name="brand"
-							placeholder="Бренд" required>
+<div class="col-md-5">
+    <div class="form-area">  
+        <form action="createPhone" method="post">
+         <input type="hidden" name="${_csrf.parameterName}"
+								value="${_csrf.token}" />
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Додати телефон</h3>
+    				<div class="form-group">
+						<input type="text" class="form-control"  name="brand" placeholder="Бренд" required>
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="type"
-							placeholder="Модель" required>
+						<input type="text" class="form-control" name="type" placeholder="Модель" required>
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="price"
-							placeholder="Ціна" required>
+						<input type="text" class="form-control" name="price" placeholder="Ціна" required>
 					</div>
-					<div class="form-group">
-						<input type="file" class="form-control" name="photo" required>
-					</div>
-
-
-					<input type="submit" value="Додатти" id="submit" name="submit"
-						class="btn btn-primary pull-right">
-				</form>
-			</div>
-		</div>
-	</div>
+                   
+        <input type="submit" value="Додатти" id="submit" name="submit" class="btn btn-primary pull-right">
+        </form>
+    </div>
+</div>
+</div>
 
 </body>
 </html>
